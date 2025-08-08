@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mastery - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Mastery Project - Task Manager</h1>
+        
+        <!-- Part 1: JavaScript Basics -->
+        <div class="section">
+            <h2> Part 1: JavaScript Basics - User Profile</h2>
+            <div class="input-group">
+                <input type="text" id="userName" placeholder="Enter your name">
+                <input type="number" id="userAge" placeholder="Enter your age">
+                <button onclick="createUserProfile()">Create Profile</button>
+            </div>
+            <div id="profileOutput" class="output"></div>
+            
+            <div class="demo-section">
+                <h3>Variable Types Demo</h3>
+                <button onclick="demonstrateVariables()">Show Variable Types</button>
+                <div id="variableDemo" class="output"></div>
+            </div>
+        </div>
+
+        <!-- Part 2: Functions -->
+        <div class="section">
+            <h2> Part 2: Custom Functions - Task Operations</h2>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter a new task">
+                <select id="prioritySelect">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            
+            <div class="stats" id="taskStats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div>Total Tasks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div>Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pendingTasks">0</div>
+                    <div>Pending</div>
+                </div>
+            </div>
+            
+            <button onclick="calculateProductivity()">Calculate Productivity</button>
+            <div id="productivityOutput" class="output"></div>
+        </div>
+
+        <!-- Part 3: Loops -->
+        <div class="section">
+            <h2> Part 3: Loops - Dynamic Content Generation</h2>
+            <div class="input-group">
+                <input type="number" id="countdownStart" placeholder="Countdown start number" value="10">
+                <button onclick="startCountdown()">Start Countdown</button>
+                <button onclick="generateTaskReport()">Generate Task Report</button>
+            </div>
+            <div id="loopOutput" class="output"></div>
+        </div>
+
+        <!-- Part 4: DOM Manipulation -->
+        <div class="section">
+            <h2> Part 4: DOM Mastery - Interactive Task List</h2>
+            <div id="taskList"></div>
+            <div class="input-group">
+                <button onclick="toggleAllTasks()">Toggle All Tasks</button>
+                <button onclick="clearCompleted()">Clear Completed</button>
+                <button onclick="changeTheme()">Change Theme</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

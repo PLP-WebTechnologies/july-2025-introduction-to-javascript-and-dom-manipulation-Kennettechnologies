@@ -1,0 +1,227 @@
+/* ======================================
+   CSS STYLES FOR JAVASCRIPT MASTERY PROJECT
+   ====================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Section Styling */
+.section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 5px;
+}
+
+/* Input Groups and Form Elements */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+input, button, select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input {
+    flex: 1;
+    min-width: 200px;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+button:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+/* Task Items */
+.task-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.task-item.completed {
+    opacity: 0.7;
+    border-left-color: #28a745;
+    background: #e8f5e8;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Priority Labels */
+.task-priority {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    color: white;
+}
+
+.priority-high { 
+    background: #dc3545; 
+}
+
+.priority-medium { 
+    background: #ffc107; 
+    color: #333; 
+}
+
+.priority-low { 
+    background: #28a745; 
+}
+
+/* Task Actions */
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 12px;
+    min-width: 60px;
+}
+
+.btn-complete {
+    background: #28a745;
+}
+
+.btn-delete {
+    background: #dc3545;
+}
+
+/* Statistics Grid */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* Output Areas */
+.output {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border-left: 4px solid #17a2b8;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+/* Demo Sections */
+.demo-section {
+    background: #e3f2fd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 4px solid #2196f3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .task-actions {
+        justify-content: center;
+    }
+}
